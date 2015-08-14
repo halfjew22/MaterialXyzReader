@@ -8,7 +8,6 @@ import android.content.IntentFilter;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -19,7 +18,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.android.volley.toolbox.NetworkImageView;
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
 import com.example.xyzreader.data.ItemsContract;
@@ -43,7 +41,7 @@ public class ArticleListActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article_list);
 
-        ((CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar_layout)).setTitle("XYZ Reader");
+//        ((CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar_layout)).setTitle("XYZ Reader");
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
@@ -158,13 +156,13 @@ public class ArticleListActivity extends AppCompatActivity implements
             holder.thumbnailView.setImageUrl(
                     mCursor.getString(ArticleLoader.Query.THUMB_URL),
                     ImageLoaderHelper.getInstance(ArticleListActivity.this).getImageLoader());
-//            holder.thumbnailView.setAspectRatio(mCursor.getFloat(ArticleLoader.Query.ASPECT_RATIO));
+            holder.thumbnailView.setAspectRatio(mCursor.getFloat(ArticleLoader.Query.ASPECT_RATIO));
 
-            if (position == getItemCount() - 1) {
-                holder.divider.setVisibility(View.GONE);
-            } else {
-                holder.divider.setVisibility(View.VISIBLE);
-            }
+//            if (position == getItemCount() - 1) {
+//                holder.divider.setVisibility(View.GONE);
+//            } else {
+//                holder.divider.setVisibility(View.VISIBLE);
+//            }
         }
 
         @Override
@@ -174,20 +172,20 @@ public class ArticleListActivity extends AppCompatActivity implements
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-//        public DynamicHeightNetworkImageView thumbnailView;
-        public NetworkImageView thumbnailView;
+        public DynamicHeightNetworkImageView thumbnailView;
+//        public NetworkImageView thumbnailView;
 
         public TextView titleView;
         public TextView subtitleView;
 
-        public View divider;
+//        public View divider;
 
         public ViewHolder(View view) {
             super(view);
-            thumbnailView = (NetworkImageView) view.findViewById(R.id.thumbnail);
+            thumbnailView = (DynamicHeightNetworkImageView) view.findViewById(R.id.thumbnail);
             titleView = (TextView) view.findViewById(R.id.article_title);
             subtitleView = (TextView) view.findViewById(R.id.article_subtitle);
-            divider = view.findViewById(R.id.divider);
+//            divider = view.findViewById(R.id.divider);
         }
     }
 }
