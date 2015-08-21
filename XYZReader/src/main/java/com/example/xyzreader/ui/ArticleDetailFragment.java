@@ -1,15 +1,12 @@
 package com.example.xyzreader.ui;
 
 import android.app.LoaderManager;
-import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.ShareCompat;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
@@ -105,13 +102,13 @@ public class ArticleDetailFragment extends android.app.Fragment implements
                              Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.fragment_article_detail, container, false);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-
-//            getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-
-//            getActivityCast().getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//
+////            getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+//
+////            getActivityCast().getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+//
+//        }
 
         getActivityCast().setSupportActionBar((Toolbar) getActivityCast().findViewById(R.id.toolbar_activity));
 
@@ -140,15 +137,15 @@ public class ArticleDetailFragment extends android.app.Fragment implements
 
         mStatusBarColorDrawable = new ColorDrawable(0);
 
-        mRootView.findViewById(R.id.share_fab).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(Intent.createChooser(ShareCompat.IntentBuilder.from(getActivity())
-                        .setType("text/plain")
-                        .setText("Some sample text")
-                        .getIntent(), getString(R.string.action_share)));
-            }
-        });
+//        mRootView.findViewById(R.id.share_fab).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(Intent.createChooser(ShareCompat.IntentBuilder.from(getActivity())
+//                        .setType("text/plain")
+//                        .setText("Some sample text")
+//                        .getIntent(), getString(R.string.action_share)));
+//            }
+//        });
 
         bindViews();
 //        updateStatusBar();
