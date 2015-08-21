@@ -6,7 +6,11 @@
 
     <dimen name="fab_elevation">2dp</dimen>
     <dimen name="fab_press_translation_z">6dp</dimen>
-    <dimen name="fab_margin">24dp</dimen>
+
+    <dimen name="fab_marginLeft">0dp</dimen>
+    <dimen name="fab_marginTop">0dp</dimen>
+    <dimen name="fab_marginRight">8dp</dimen>
+    <dimen name="fab_marginBottom">0dp</dimen>
 
     <!--list item-->
     <dimen name="list_item_horizontal_padding">16dp</dimen>

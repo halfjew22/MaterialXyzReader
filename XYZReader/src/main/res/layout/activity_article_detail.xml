@@ -28,7 +28,6 @@
         android:background="@drawable/add_fab_background"
         android:contentDescription="@string/action_share"
         android:src="@drawable/ic_share"
-        app:layout_anchorGravity="bottom|right|end"
         style="@style/FabStyle"/>
 
 </FrameLayout>

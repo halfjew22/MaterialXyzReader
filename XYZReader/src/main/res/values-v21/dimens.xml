@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--In the design support library, as of 8/21/15, the FAB renders its
+        shadow on API < 21. This causes problems with padding because
+        internally, the shadow is seen as "part" of the view, so it
+        will include it when making decisions about layout. To account
+        for this, we include different FAB margins for pre and post
+        Lollipop.-->
+    <!--Stack post: http://stackoverflow.com/questions/30687888/android-design-library-floating-action-button-padding-margin-issues-->
+    <dimen name="fab_marginLeft">16dp</dimen>
+    <dimen name="fab_marginTop">16dp</dimen>
+    <dimen name="fab_marginRight">16dp</dimen>
+    <dimen name="fab_marginBottom">16dp</dimen>
+</resources>
