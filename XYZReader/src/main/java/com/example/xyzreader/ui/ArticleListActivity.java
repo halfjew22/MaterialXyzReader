@@ -43,7 +43,7 @@ public class ArticleListActivity extends AppCompatActivity implements
 
 //        ((CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar_layout)).setTitle("XYZ Reader");
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar_activity);
 
 //        final View toolbarContainerView = findViewById(R.id.toolbar_container);
 
